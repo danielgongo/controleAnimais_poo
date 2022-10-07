@@ -1,0 +1,8 @@
+C:\Curso_c#\POO_DFILITTO\ConstroleAnimais\ConstroleAnimais\bin\Debug\ConstroleAnimais.exe.config
+C:\Curso_c#\POO_DFILITTO\ConstroleAnimais\ConstroleAnimais\bin\Debug\ConstroleAnimais.exe
+C:\Curso_c#\POO_DFILITTO\ConstroleAnimais\ConstroleAnimais\bin\Debug\ConstroleAnimais.pdb
+C:\Curso_c#\POO_DFILITTO\ConstroleAnimais\ConstroleAnimais\obj\Debug\ConstroleAnimais.csproj.AssemblyReference.cache
+C:\Curso_c#\POO_DFILITTO\ConstroleAnimais\ConstroleAnimais\obj\Debug\ConstroleAnimais.csproj.SuggestedBindingRedirects.cache
+C:\Curso_c#\POO_DFILITTO\ConstroleAnimais\ConstroleAnimais\obj\Debug\ConstroleAnimais.csproj.CoreCompileInputs.cache
+C:\Curso_c#\POO_DFILITTO\ConstroleAnimais\ConstroleAnimais\obj\Debug\ConstroleAnimais.exe
+C:\Curso_c#\POO_DFILITTO\ConstroleAnimais\ConstroleAnimais\obj\Debug\ConstroleAnimais.pdb
