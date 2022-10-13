@@ -10,55 +10,56 @@ namespace ConstroleAnimais
     {
         static void Main(string[] args)
         {
-            Animal a1 = new Animal();
-            Animal a2 = new Animal();
-            Animal a3 = new Animal();
-           
+            Animal a;
+            int tl = 0;
+            Animal[] animais = new Animal[10];
             int tlCachorro = 0, tlGato = 0, tlPeixe = 0;
+            int tipoAnimal = 0;
+
 
             Console.WriteLine("CONTROLE DE ANIMAIS");
+
+            //Leitura da quantidade de animais
+            try
+            {
+                Console.Write("Quantos animais deseja informar (Máx 10): ");
+                tl = int.Parse(Console.ReadLine());
+                if (tl > 20) tl = 20;
+            }
+            catch
+            {
+                tl = 0;
+            }
            
-            //Primeiro animal
-            Console.Write("Informe o nome do 1º animal: ");
-            a1.Nome = Console.ReadLine();
-
-            Console.Write("Informe o tipo do 1º animal: ");
-            a1.Tipo = Console.ReadLine();
-
-            if (a1.Tipo.Equals("cachorro")) tlCachorro++;
-            if (a1.Tipo.Equals("gato")) tlGato++;
-            if (a1.Tipo.Equals("peixe")) tlPeixe++;
-
-            //Segundo animal
-            Console.Write("Informe o nome do 2º animal: ");
-            a2.Nome = Console.ReadLine();
-
-            Console.Write("Informe o tipo do 2º animal: ");
-            a2.Tipo = Console.ReadLine();
-
-            if (a2.Tipo.Equals("cachorro")) tlCachorro++;
-            if (a2.Tipo.Equals("gato")) tlGato++;
-            if (a2.Tipo.Equals("peixe")) tlPeixe++;
-
-            //Terceiroo animal
-            Console.Write("Informe o nome do 3º animal: ");
-            a3.Nome = Console.ReadLine();
-
-            Console.Write("Informe o tipo do 3º animal: ");
-            a3.Tipo = Console.ReadLine();
-
-            if (a3.Tipo.Equals("cachorro"))
+            for(int i = 0; i < tl; i++)
             {
-                tlCachorro++;
+
+                //Primeiro animal
+                a = new Animal();
+
+                Console.Write("Informe o nome do "+(i+1)+ "º animal: ");
+                a.Nome = Console.ReadLine();
+
+                Console.Write("Informe o tipo do "+(i+1)+ "º animal(Cachorro - 0; Gato = 1; Peixe = 2): ");
+                try
+                {
+                    tipoAnimal = int.Parse(Console.ReadLine());
+                    if (tipoAnimal < 0 || tipoAnimal > 2) tipoAnimal = 2;
+                }
+                catch
+                {
+                    tipoAnimal = 2;
+                }
+
+                a.Tipo = (TipoAnimal)tipoAnimal;
+                if (a.Tipo == TipoAnimal.Cachorro) tlCachorro++;
+                if (a.Tipo == TipoAnimal.Gato) tlGato++;
+                if (a.Tipo == TipoAnimal.Peixe) tlPeixe++;
+                //armazenar o animal no vetor
+                animais[i] = a;
             }
-            else if (a3.Tipo.Equals("gato"))
-            {
-                tlGato++;
-            }
-            else
-            {
-                tlPeixe++;
-            }
+
+
 
             Console.WriteLine("Quantidade de animais");
             Console.WriteLine($"Cachorros:  " + tlCachorro + "\nGatos: " + tlGato + "\nPeixes: " + tlPeixe);

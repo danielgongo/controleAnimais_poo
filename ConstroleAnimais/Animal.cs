@@ -5,12 +5,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConstroleAnimais
+namespace ConstroleAnimais 
+
 {
+    public enum TipoAnimal {Cachorro, Gato, Peixe};
     public class Animal
     {
+        public Animal()
+        {
+            this.Nome = "";
+            this.Tipo = 0;
+        }
+
+        public Animal(string nome, TipoAnimal tipo )
+        {
+            this.Nome = nome;
+            this.Tipo = tipo;
+        }
+
         private string _nome;
-        private string _tipo;
+        private TipoAnimal _tipo;
 
         public string Nome
         {
@@ -22,21 +36,11 @@ namespace ConstroleAnimais
             }
         }
 
-        public string Tipo
+        public TipoAnimal Tipo
         {
             get { return _tipo; }
-
-            set
-            {
-                if(value == "cachorro" || value == "gato" || value == "peixe")
-                {
-                    _tipo = value;
-                }
-                else
-                {
-                    Console.WriteLine("Tipo de animal inválido");
-                }
-            }
+            set { _tipo = value; }
+           
         }
     }
 }
